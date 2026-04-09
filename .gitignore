@@ -1,0 +1,30 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual Environment
+backend/venv/
+backend/.env
+venv/
+env/
+.env
+
+# Node.js
+frontend/node_modules/
+node_modules/
+npm-debug.log*
+
+# Production / Build
+frontend/dist/
+dist/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
