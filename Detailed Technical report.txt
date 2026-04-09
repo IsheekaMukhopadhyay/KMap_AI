@@ -1,0 +1,54 @@
+ACADEMIC PAPER KNOWLEDGE MAPPER - TECHNICAL REPORT
+
+OVERVIEW
+--------------------------------------------------------------------------------
+The Academic Paper Knowledge Mapper is a full-stack, AI-powered application designed 
+to analyze, visualize, and query scientific research papers. It combines 
+information retrieval (RAG) with machine learning (clustering) to provide 
+a multi-dimensional understanding of complex documents.
+
+SYSTEM ARCHITECTURE
+--------------------------------------------------------------------------------
+1. Frontend (React / Vite):
+   - Modern Dashboard with state-of-the-art UI/UX (Framer Motion).
+   - Interactive Knowledge Map using Plotly.js.
+   - Contextual Chatbot interface for document querying.
+   - Centralized configuration for API Gateway communication.
+
+2. Backend (FastAPI / Python):
+   - Fast and asynchronous API endpoints.
+   - In-memory ephemeral storage for security (no files persisted to disk).
+   - Security middleware for CSP, HSTS, and XSS protection.
+   - Global Rate Limiting (SlowAPI) to prevent resource abuse.
+
+CORE MODULES & PIPELINES
+--------------------------------------------------------------------------------
+1. PDF Parser (PyPDF2):
+   - Real-time extraction of text from PDF byte streams.
+   - Semantic chunking with recursive character splitting.
+
+2. ML Engine (Scikit-Learn):
+   - TF-IDF Vectorization for semantic representation.
+   - K-Means Clustering for identifying major topics/themes.
+   - PCA (Principal Component Analysis) for 2D dimensionality reduction.
+
+3. RAG Pipeline (FAISS & Sentence-Transformers):
+   - Embedding: all-MiniLM-L6-v2 (Local, CPU-efficient).
+   - Vector Storage: FAISS (FlatL2) for fast similarity search.
+   - LLM Inference: Llama 3.1 (Groq) or Gemma 3 (OpenRouter) for strict context-aware chat.
+
+SECURITY IMPLEMENTATION
+--------------------------------------------------------------------------------
+- API Gateway: All endpoints are protected by an X-API-Key header.
+- Environment Hardening: Strict validation of API keys and secrets on startup.
+- Production Hygiene: Suppressed internal stack traces and disabled debug docs in prod.
+- Ephemeral Data: All document data exists only in server memory and is cleared on reload.
+
+VERIFICATION
+--------------------------------------------------------------------------------
+- Unit tested the RAG pipeline for retrieval accuracy.
+- Load-tested clustering with varying document sizes (1 to 20MB).
+- Verified security perimeter with unauthorized access attempts.
+
+Prepared on: 2026-04-09
+Version: 1.1.0 (Hardened)

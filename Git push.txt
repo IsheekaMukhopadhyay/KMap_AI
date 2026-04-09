@@ -1,0 +1,36 @@
+PROJECT GIT PUSH LOG - KMap_AI
+
+REPOSITORY INITIALIZATION & CONFIGURATION
+--------------------------------------------------------------------------------
+1. Created root .gitignore to protect:
+   - Python virtual environments (venv/)
+   - Frontend dependencies (node_modules/)
+   - Sensitive credentials (.env)
+   - Temporary cache files (__pycache__/)
+
+2. Configured local identity:
+   $ git config user.name "Isheeka Mukhopadhyay"
+   $ git config user.email "isheeka.mukhopadhyay@gmail.com"
+
+3. Initialized repository:
+   $ git init
+   $ git add .
+   $ git commit -m "Initial commit: Academic Paper Knowledge Mapper"
+
+REMOTE SYNCHRONIZATION
+--------------------------------------------------------------------------------
+1. Linked GitHub Remote:
+   $ git remote add origin https://github.com/IsheekaMukhopadhyay/KMap_AI.git
+
+2. Handled Remote Conflicts (Rebase):
+   $ git pull origin main --rebase --allow-unrelated-histories
+
+3. Final Push to Main:
+   $ git push -u origin main
+
+STATUS
+--------------------------------------------------------------------------------
+PUSH SUCCESSFUL: April 09, 2026
+COMMIT HASH: dd9aea4...
+BRANCH: main
+REMOTE: origin

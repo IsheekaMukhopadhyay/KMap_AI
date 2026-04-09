@@ -1,0 +1,30 @@
+ACADEMIC PAPER KNOWLEDGE MAPPER - FEATURE LIST
+
+1. DYNAMIC DOCUMENT ANALYSIS
+   - In-memory PDF parsing (no persistent storage for maximum privacy).
+   - High-performance text chunking with context overlap.
+
+2. INTERACTIVE KNOWLEDGE MAPPING
+   - 2D Visualization of document architecture using TF-IDF and K-Means.
+   - Interactive Plotly map with hoverable snippets for quick browsing.
+   - Intelligent topic grouping with automated thematic labeling.
+
+3. CONTEXTUAL RAG CHATBOT
+   - Hallucination-free retrieval using FAISS vector search.
+   - Strict "I don't know" enforcement if answers are missing from context.
+   - Support for Groq (Llama 3.1) and OpenRouter (Gemma 3) LLM backends.
+
+4. ACADEMIC UI/UX
+   - Dark-mode, premium aesthetics using Tailwind CSS and Framer Motion.
+   - Multi-tab workspace: Dashboard, My Clusters, Documents, and PDF Reader.
+   - Real-time processing status and smooth micro-animations.
+
+5. ENTERPRISE-READY SECURITY
+   - API Gateway protection with X-API-Key authentication.
+   - Anti-DOS Rate Limiting on all sensitive endpoints.
+   - Secure Headers (CSP, HSTS, X-Content-Type) out of the box.
+   - Production-safe error handling (log-only stack traces).
+
+6. DEVELOPER FRIENDLY
+   - Plug-and-play setup with comprehensive requirements.txt.
+   - Detailed environment validation and .env.example included.
